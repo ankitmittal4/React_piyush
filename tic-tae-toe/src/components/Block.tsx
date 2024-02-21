@@ -1,6 +1,9 @@
 import React from 'react'
-
-const Block: React.FC = () => {
-    return <div className='block'></div>
+interface blockProps{
+    value?: string | null;
+    onClick?: () => void;
+}
+const Block: React.FC<blockProps> = (props) => {
+    return <div onClick={props.onClick} className='block'>{props.value}</div>
 }
 export default Block;
